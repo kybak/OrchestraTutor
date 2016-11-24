@@ -1,0 +1,32 @@
+<template name="dashboard">
+    <div class="flex-column full-container">
+        {{> sidebar}}
+
+        <div class="flex-column dashboard-container">
+            <div class="welcome flex-column">
+                <div class="flex-row">
+                    <h2>Welcome {{user.profile.firstName}}!</h2>
+
+                    <form style="width: 400px; position: relative;">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input type="text" class="text-input form-control" style="padding-left: 30px;">
+                    </form>
+
+                </div>
+                <span>Primary instrument: <b>{{user.profile.instrument}}</b></span>
+            </div>
+
+            <div class="dash-info-box">
+                <span>Orchestra Tutor Updates</span>
+            </div>
+
+            <div class="dash-info-box">
+                <span>Recently Played Videos</span>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</template>

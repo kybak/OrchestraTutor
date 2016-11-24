@@ -1,0 +1,31 @@
+
+
+@keyframes fade {
+  0% {
+    background-image: url('/slide1.png');
+  }
+  35% {
+    background-image: url('/slide2.png');;
+  }
+  70% {
+    background-image: url('/slide3.png');
+  }
+  100% {
+    background-image: url('/slide1.png');
+  }
+}
+
+@keyframes slide {
+  0% {
+    content: "Tutorial videos for your string orchestra music";
+  }
+  35% {
+    content: "Something else";
+  }
+  70% {
+    content: "Tutorial videos for your string orchestra music";
+  }
+  100% {
+    content: "Tutorial videos for your string orchestra music";
+  }
+}

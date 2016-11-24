@@ -1,0 +1,50 @@
+<template name="tier1">
+    <div class="subscribe-tier {{#if expanded}}expanded-tier{{else}}collapsed-tier{{/if}}">
+        <div class="flex-row tier-header">
+            <h2>Standard</h2>
+        </div>
+        <div class="tier-item flex-row">
+            <b>Access to:</b>
+        </div>
+        <div class="tier-item flex-row">
+            Beginner Basics, Scales, Technique Games
+        </div>
+        <div class="tier-item flex-row">
+            All Orchestra Pieces
+        </div>
+        <div class="tier-item flex-row">
+            Middle School 2016 Region Audition Music Region 18, 28 & 32
+        </div>
+        <div class="tier-item flex-row" style="text-decoration: line-through">
+            Etudes Used for Region & All-State Auditions
+        </div>
+        <div class="price-container flex-row">
+            <div class="flex-column price">
+                <div class="flex-column">
+                    <h2>$9.95</h2>
+                    <span class="period">PER MONTH</span>
+                </div>
+                <div class="flex-column">
+                    <span>Recurring payment.</span>
+                    <span>No conract.</span>
+                </div>
+                <a href="{{pathFor '/student-signup/:plan' plan="basic_monthly"}}"><button class="ot-button">Select</button></a>
+
+            </div>
+
+            <div class="flex-column price">
+                <div class="flex-column">
+                    <h2>$95</h2>
+                    <span class="period">PER YEAR</span>
+                </div>
+                <div class="flex-column">
+                    <span>One-time payment.</span>
+                    <span>20% savings.</span>
+                </div>
+                <a href="{{pathFor '/student-signup/:plan' plan="basic_yearly"}}"><button class="ot-button">Select</button></a>
+
+            </div>
+        </div>
+    </div>
+</template>
+

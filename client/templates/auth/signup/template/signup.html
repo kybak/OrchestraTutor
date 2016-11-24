@@ -1,0 +1,86 @@
+<template name="studentSignup">
+    <div class="flex-column full-container">
+        {{#autoForm id="studentSignup" collection=Collections.Students}}
+
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                <div class="flipper {{#if flipped}}flipped{{/if}}">
+
+                    <div class="flex-column signup-container front {{#if profileHide}}hide{{/if}}">
+                        <div class="progress-circles flex-row">
+                            <div class="progress-circle-active"></div>
+                            <div class="progress-circle"></div>
+                            <div class="progress-circle"></div>
+                        </div>
+
+                        <h4>Create your profile.</h4>
+                        {{> afFieldInput name='profile.firstName' placeholder="schemaLabel"}}
+                        {{> afFieldInput name='profile.lastName' placeholder="schemaLabel"}}
+                        {{> afFieldInput name='email' placeholder="Email address"}}
+                        {{> afFieldInput name='profile.userName' placeholder="Username"}}
+                        {{> afFieldInput name='password' placeholder="schemaLabel"}}
+
+                        <button type="button" class="next btn-signup">Next</button>
+                    </div>
+
+
+                    <div class="flex-column signup-container back">
+                        <div class="progress-circles flex-row">
+                            <div class="progress-circle"></div>
+                            <div class="progress-circle-active"></div>
+                            <div class="progress-circle"></div>
+                        </div>
+
+                        <h4>Enter additional information.</h4>
+                        {{> afFieldInput name='profile.phone' placeholder="Phone number"}}
+                        {{> afFieldInput name='profile.school' placeholder="schemaLabel"}}
+                        {{> afFieldInput name='profile.instrument' placeholder="schemaLabel" value='null'}}
+                        {{> afFieldInput name='profile.country' placeholder="schemaLabel"}}
+                        <div class="flex-row" style="justify-content: space-between;">
+                            {{> afFieldInput name='profile.city' placeholder="schemaLabel" style="width:72%"}}
+                            {{> afFieldInput name='profile.state' placeholder="schemaLabel" style="width:25%"}}
+                        </div>
+                        {{> afFieldInput name='profile.parentEmail' placeholder="Parent/guardian email"}}
+                        {{> afFieldInput name='profile.heardFrom' value='null'}}
+                        <div class="form-group" style="width: 100%; font-size: 18px;">
+                            {{> afFieldInput name='profile.privateTeacher' style="margin:10px 0"}}
+                        </div>
+
+
+                        <div class="flex-row" style="justify-content: space-between; width: 100%;">
+                            <span class="toProfile go-back"><i class="fa fa-arrow-left" aria-hidden></i><b>
+                                Back</b></span>
+                        </div>
+
+                        <button type="button" class="toBilling btn-signup">Next</button>
+                    </div>
+
+                    <div class="flex-column signup-container front {{#unless profileHide}}hide{{/unless}}">
+                        <div class="progress-circles flex-row">
+                            <div class="progress-circle"></div>
+                            <div class="progress-circle"></div>
+                            <div class="progress-circle-active"></div>
+                        </div>
+
+                        <h4>Enter your billing information.</h4>
+                        {{> creditCard}}
+
+                        <div class="flex-row" style="justify-content: space-between; width: 100%;">
+                            <span class="go-back"><i class="fa fa-arrow-left" aria-hidden></i><b> Back</b></span>
+                            <span class="terms">Terms and conditions</span>
+                        </div>
+
+                        <button type="submit" class="btn-signup flex-column"
+                                style="justify-content: center; align-items: center;">
+                            <span>Submit</span>
+                            <span style="font-size: 10px;">I agree to the terms and conditions</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        {{/autoForm}}
+    </div>
+
+    {{> terms}}
+    {{> loading}}
+</template>

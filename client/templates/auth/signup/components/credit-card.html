@@ -1,0 +1,9 @@
+<template name="creditCard">
+    <input type="text" data-stripe="name" class="text-input form-control billing-name" placeholder="Billing name" required>
+    <input type="text" data-stripe="cardNumber" class="text-input form-control card-number" placeholder="Card number" maxlength="16" required>
+    <div class="flex-row">
+        <input type="text" data-stripe="expMo" class="text-input form-control exp-month" placeholder="Exp month" style="margin-right:7px" maxlength="2" minlength="2" required>
+        <input type="text" data-stripe="expYr" class="text-input form-control exp-year" placeholder="Exp year" maxlength="4" minlength="4" required>
+    </div>
+        <input type="text" data-stripe="cvc" class="text-input form-control cvc" placeholder="CVC" maxlength="3" minlength="3" required>
+</template>

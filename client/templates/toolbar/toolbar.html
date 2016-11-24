@@ -1,0 +1,16 @@
+<template name="toolbar">
+
+    <div class="toolbar flex-row">
+
+        <div class="logo"></div>
+
+        {{#unless currentUser}}
+            {{> loggedout}}
+        {{else}}
+            {{> loggedin}}
+        {{/unless}}
+
+
+    </div>
+
+</template>

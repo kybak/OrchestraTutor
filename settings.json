@@ -1,0 +1,49 @@
+{
+  "public": {
+    "plans": [
+      {
+        "name": "basic_monthly",
+        "amount": {
+          "cents": 995,
+          "usd": "$9.95"
+        },
+        "interval": "month"
+      },
+      {
+        "name": "basic_yearly",
+        "amount": {
+          "cents": 9500,
+          "usd": "$95"
+        },
+        "interval": "year"
+      },
+      {
+        "name": "advanced_monthly",
+        "amount": {
+          "cents": 2495,
+          "usd": "$24.95"
+        },
+        "limit": 10,
+        "interval": "month"
+      },
+      {
+        "name": "advanced_6mo",
+        "amount": {
+          "cents": 13500,
+          "usd": "$135"
+        },
+        "interval": "6 months"
+      }
+    ],
+    "stripe": {
+      "testPublishableKey": "pk_test_A1A0dkKb9pVsKwImhnHkIYtZ",
+      "livePublishableKey": "pk_test_NU0mc4HdlbS2B7klVLnLTGSK"
+    }
+  },
+  "private": {
+    "stripe": {
+      "testSecretKey": "sk_test_cmYr4wc4M9o4Q68kNVszhldz",
+      "liveSecretKey": "sk_live_RfOeUunGMcqbxzVXB6dGhA5p"
+    }
+  }
+}
